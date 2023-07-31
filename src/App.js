@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+// 當同一個 js或 jsx中有多個可以引入時，就可以指定引入
+// import { Header } from "./components/header"
+import Header from "./components/header"
+import Footer from "./components/footer"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Hello world</h3>
+      <Header />
+      <Footer />
     </div>
   );
 }
