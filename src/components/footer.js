@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 class Footer extends Component{
     render() {
         return (
-            <p>This is footer component(class component)</p>
+            <React.Fragment>
+                <h3>This is footer component(class component)</h3>
+                <p>trademark: {this.props.trademark}</p>
+            </React.Fragment>
         )
     }
 }
