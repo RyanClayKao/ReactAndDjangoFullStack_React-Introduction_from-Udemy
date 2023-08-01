@@ -25,6 +25,21 @@ class Footer extends Component {
     }
 
     render() {
+        const animals = [
+            {
+                id: 1,
+                kind: "cat",
+            },
+            {
+                id: 2,
+                kind: "dog",
+            },
+            {
+                id: 3,
+                kind: "horse",
+            },
+        ]
+
         return (
             <React.Fragment>
                 {/* <h3 onClick={this.createAlert}>This is footer component(class component)</h3> */}
@@ -43,6 +58,17 @@ class Footer extends Component {
                     )}
                 </div>
                 
+                {
+                    animals.map( item => {
+                        return (
+                            <div key={item.id}>
+                                <h3>id: {item.id}</h3>
+                                <h3>type: {item.kind}</h3>
+                            </div>
+                        )
+                    })
+                }
+
             </React.Fragment>
         )
     }
