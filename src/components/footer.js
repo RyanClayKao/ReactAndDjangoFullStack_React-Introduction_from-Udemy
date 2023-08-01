@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 class Footer extends Component {
     state = {
         // name: "Ryan"
-        name: ""
+        name: "",
+        age: 18,
+        isLogin: false
     }
 
     createAlert() {
@@ -31,6 +33,16 @@ class Footer extends Component {
                 <input
                     value={this.state.name}
                     onChange={this.inputChanged} type="text" />
+
+                <div>
+                    狀態:&ensp;
+                    { this.state.isLogin ? (
+                        <span>已登入</span>
+                    ) : (
+                        <span>未登入</span>
+                    )}
+                </div>
+                
             </React.Fragment>
         )
     }
