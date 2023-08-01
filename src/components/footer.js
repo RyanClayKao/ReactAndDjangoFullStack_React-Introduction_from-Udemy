@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 
 class Footer extends Component {
     state = {
-        name: "Ryan"
+        // name: "Ryan"
+        name: ""
     }
 
     createAlert() {
@@ -15,6 +16,10 @@ class Footer extends Component {
         this.setState({ name: event.target.value });
         // 這裡的狀態並不會即時更新，仍會是先前的狀態
         console.log(this.state.name);
+    }
+
+    componentDidMount() {
+        this.setState({ name: "Ryan" });
     }
 
     render() {
