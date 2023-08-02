@@ -1,9 +1,11 @@
 import './App.css';
 // 當同一個 js或 jsx中有多個可以引入時，就可以指定引入
 // import { Header } from "./components/header"
-import Header from "./components/header"
-import Footer from "./components/footer"
-import styled from "styled-components"
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Numbers from "./components/numbers";
+
+import styled from "styled-components";
 
 function ShowMessage(props){
   if (props.isShow){
@@ -35,12 +37,14 @@ function App() {
   if (userLogin) {
     return (
       <div className="App">
-        <h3>Hello world</h3>
+        {/* <h3>Hello world</h3>
         <p style={pStyle}>main content</p>
         <Paragraph>New Styled</Paragraph>
         <Header info="This is my message" myNumber="5"/>
         <Footer trademark="page by RyanClayKao" appAlert={alertFromApp}/>
-        <ShowMessage isShow={false} />
+        <ShowMessage isShow={false} /> */}
+
+        <Numbers></Numbers>
       </div>
     );
   }else{
