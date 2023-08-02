@@ -7,13 +7,20 @@ import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
+const context = React.createContext();
+export const CtxConsumer = context.Consumer;
+
+const animals = ['snake', 'elephant', 'lion']
+
 const routing = (
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/header" element={<Header />} />
-      <Route path="/footer" element={<Footer />} />
-    </Routes>
+    <context.Provider value={{ animals: animals }}>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/footer" element={<Footer />} />
+      </Routes>
+    </context.Provider>
   </BrowserRouter>
 )
 
