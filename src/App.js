@@ -3,6 +3,7 @@ import './App.css';
 // import { Header } from "./components/header"
 import Header from "./components/header"
 import Footer from "./components/footer"
+import styled from "styled-components"
 
 function ShowMessage(props){
   if (props.isShow){
@@ -12,10 +13,22 @@ function ShowMessage(props){
   }
 }
 
+function alertFromApp() {
+  alert("這個 function 是從 App.js來的");
+}
+
+const pStyle = {
+  fontSize: '2em',
+  color: 'red'
+}
+
+const Paragraph = styled.p`
+  font-size: 3em;
+  color: green;
+`;
+
 function App() {
-  function alertFromApp() {
-    alert("這個 function 是從 App.js來的");
-  }
+  
 
   const userLogin = true;
 
@@ -23,6 +36,8 @@ function App() {
     return (
       <div className="App">
         <h3>Hello world</h3>
+        <p style={pStyle}>main content</p>
+        <Paragraph>New Styled</Paragraph>
         <Header info="This is my message" myNumber="5"/>
         <Footer trademark="page by RyanClayKao" appAlert={alertFromApp}/>
         <ShowMessage isShow={false} />
