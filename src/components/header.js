@@ -4,8 +4,11 @@ function Header(props){
     return (
         // 用 React.Fragment標籤，可以達到包裹的目的，實際上不會再有一層標籤在外面
         <React.Fragment>
-            <h3>This is Header component(functional component)</h3>
-            <p>info: {props.info}, myNumber: {props.myNumber}</p>
+            <div style={{"backgroundColor": "lightgreen"}}>
+                <h3>This is Header component(functional component)</h3>
+                <p>info: {props.info}, myNumber: {props.myNumber}</p>
+            </div>
+            
         </React.Fragment>
     )
 }
